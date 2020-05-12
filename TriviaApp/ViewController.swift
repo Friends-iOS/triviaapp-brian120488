@@ -6,6 +6,13 @@
 //  Copyright © 2020 Adam Jackrel. All rights reserved.
 //
 
+//FEEDBACK:
+//QUESTIONS - Very well researched, but no citations. Very important to cite your sources. Otherwise great work!
+//DESIGN - Great, clean design. Easy to read and pleasing to the eye. However, you did not include an extra button (for reset, for example) and there was no score keeping.
+//CODE - really excellent coding here. Love how you used a dictionary inside of the question array to easily parse and reference the answers. Line 247 is really excellent. Very compact and efficient coding. Very well thought out and very well researched. Its obvious you've put in the time to learn more about Swift. Its very worth it! Swift is a great intro to C/C++ languages and you'll see this kind of code in the future.
+    //SOUND - It appears that the .mp3 file was not pushed along with everything else in the repo. I don't know why this happened, but to get the app to work, I had to remove all of the references to the sound playing. 
+//GENERAL FEEDBACK: very excellent work, Brian. Not everything was included but your app really shows off your coding skills and your innovative thinking.
+
 import UIKit
 import AVFoundation
 
@@ -15,7 +22,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var allButtons: [UIButton]!
     
-    var player: AVAudioPlayer?
+   // var player: AVAudioPlayer?
     
     var isLoading: Bool = false
     var correctNum: Int = 0
@@ -154,34 +161,34 @@ class ViewController: UIViewController {
         ])
     ]
     
-    func playSound(name: String) {
-        guard let url = Bundle.main.url(forResource: name, withExtension: "mp3") else { return }
-
-        do {
-                try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-                try AVAudioSession.sharedInstance().setActive(true)
-
-                /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
-                player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-
-                /* iOS 10 and earlier require the following line:
-                player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
-
-                guard let player = player else { return }
-
-                player.play()
-
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        }
+//    func playSound(name: String) {
+//        guard let url = Bundle.main.url(forResource: name, withExtension: "mp3") else { return }
+//
+//        do {
+//                try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+//                try AVAudioSession.sharedInstance().setActive(true)
+//
+//                /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+//                player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+//
+//                /* iOS 10 and earlier require the following line:
+//                player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+//
+//                guard let player = player else { return }
+//
+//                player.play()
+//
+//            } catch let error {
+//                print(error.localizedDescription)
+//            }
+//        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        player?.numberOfLoops = -1
-        playSound(name: "wii_music")
-        player?.numberOfLoops = -1
+        //player?.numberOfLoops = -1
+       // playSound(name: "wii_music")
+        //player?.numberOfLoops = -1
         for button in allButtons {
             button.layer.cornerRadius = 20
             button.layer.borderWidth = 2
@@ -213,6 +220,7 @@ class ViewController: UIViewController {
             
             isLoading = true
             _ = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+            
         }
     }
 

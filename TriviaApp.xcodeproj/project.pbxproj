@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FCFD4B72463C578003157EA /* wii_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFD4B62463C578003157EA /* wii_music.mp3 */; };
 		FB84C1A2243E614800990328 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84C1A1243E614800990328 /* AppDelegate.swift */; };
 		FB84C1A4243E614800990328 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84C1A3243E614800990328 /* SceneDelegate.swift */; };
 		FB84C1A6243E614800990328 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84C1A5243E614800990328 /* ViewController.swift */; };
@@ -37,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3FCFD4B62463C578003157EA /* wii_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wii_music.mp3; path = sounds/wii_music.mp3; sourceTree = "<group>"; };
 		FB84C19E243E614800990328 /* TriviaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB84C1A1243E614800990328 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB84C1A3243E614800990328 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				FB84C1AA243E614C00990328 /* Assets.xcassets */,
 				FB84C1AC243E614C00990328 /* LaunchScreen.storyboard */,
 				FB84C1AF243E614C00990328 /* Info.plist */,
-				3FCFD4B62463C578003157EA /* wii_music.mp3 */,
 			);
 			path = TriviaApp;
 			sourceTree = "<group>";
@@ -246,7 +243,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FCFD4B72463C578003157EA /* wii_music.mp3 in Resources */,
 				FB84C1AE243E614C00990328 /* LaunchScreen.storyboard in Resources */,
 				FB84C1AB243E614C00990328 /* Assets.xcassets in Resources */,
 				FB84C1A9243E614800990328 /* Main.storyboard in Resources */,
